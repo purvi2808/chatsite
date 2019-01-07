@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {%block title%}Title{%endblock%}</title>
+<style>
+     body   {background-image:url("https://cms-assets.tutsplus.com/uploads/users/1112/posts/25209/image/animate-bird-slide-23.gif");
+             background-size:100% 500px;
+             background-repeat: no-repeat;
+             background-color:white;}
+
+      .button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+        li {
+          float: left;
+        }
+        h1{
+          text-shadow: 3px 2px #ccffcc;
+           font-style: italic;
+        }
+        li a {
+          display: block;
+          color: blue;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #111;
+        }
+        .active {
+          background-color: black;
+          color: white;
+        }
+        h2{
+        align:center;
+        text-align:center;
+        background-color:#ccccff;
+        width:30%;
+        }
+</style>
+</head>
+<body>
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--nav-bar    home   notifications   search   username   logout-->
+
+<div class="w3-bar w3-light-grey w3-border">
+  <a href="{%url 'index'%}" class="w3-bar-item w3-button w3-black"><i class="fa fa-home"></i></a>
+  <a href="{%url 'search'%}" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+  <a href="{%url 'about'%}" class="w3-bar-item w3-button"><i class="fa fa-code"></i></a>
+  <a href="{%url 'user'%}" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+  <a href="{% url 'register'%}" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>
+</div>
+ <h2>Hey {{user.get_username}}</h2>
+    </br>
+    </br>
+
+{%block body%}
+{%endblock%}
+</body>
+</html>

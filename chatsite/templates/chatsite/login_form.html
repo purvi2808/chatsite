@@ -1,0 +1,64 @@
+<title>login</title>
+<style>
+body{
+background:#ccccff;}
+    .warning{color:red;
+     font-size:20px;
+    }
+h1 {
+  background-color:#222211;
+  color:white;
+}
+h2{
+background-color:#222211;
+  color:white;
+}
+    input {
+  border: none;
+  border-bottom: 2px solid blue;
+}
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
+a {
+  color: green;
+}
+.form{
+    align-content:center;
+    left: 50%;
+    top: 50%;
+    margin-left: -35%;
+    position: absolute;
+    margin-top: -10%;
+text-align:centre;
+height:30%;
+width:30%;
+}
+</style>
+{% block body %}
+
+
+<h1>Login for the site here!</h1>
+{%if userpassunmatch%}
+    <div class="warning">Input correct username and password </div>
+{%endif%}
+    <div class="form"><form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {%include "chatsite/form_template.html"%}
+    </br>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>
+{%endblock%}
+
+
+
+
+

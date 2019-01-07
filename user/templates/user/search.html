@@ -1,0 +1,28 @@
+{%extends "chatsite/layout.html"%}
+
+{%block title%} search{%endblock %}
+
+{%block body%}
+<style>
+    .found{color:green;
+     font-size:20px;
+    }
+    .notfound{color:red;
+     font-size:20px;
+    }
+</style>
+<form method="post">
+    {%csrf_token%}
+
+<input name="q" placeholder="Search User" type="text"/>
+<button class="button">Search</button>
+</form>
+{%if post%}
+{% if user_found%}
+<div class="found">yes!{{query}} has already registered</div>
+{%else%}
+<div class="notfound">No!{{query}} has not registered yet </div>
+{%endif%}
+{%endif%}
+
+{%endblock%}

@@ -1,0 +1,12 @@
+
+{%extends 'chatsite/layout.html'%}
+{%block title%}other user feeds{%endblock%}
+{%block body%}
+<h2>This is {{user}}'s feeds</h2>
+{% for feed in feed reversed%}
+    <h3>-{{feed.date}}</h3>
+    <h1>{{feed.data}}</h1>
+    </br>
+    </br>
+{%endfor%}
+{%endblock%}

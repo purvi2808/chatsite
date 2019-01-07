@@ -1,0 +1,28 @@
+{%extends 'chatsite/layout.html'%}
+{%block title%}index page{%endblock%}
+
+{%block body%}
+<!--
+{% for data in form%}
+    {% csrf_token %}
+    {{data.first_name}} {{data.last_name}}-{{data.email}}</br></br></br>
+{%endfor%}
+-->
+
+
+
+    <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+        <input name="all_feeds" placeholder="New Feed" type="text"/>
+        <button class="button" type="submit" >create</button>
+    </form>
+    {% for feed in all_feeds reversed%}
+    <ul>
+        <h3><a href="{%url 'othersfeed'%}?othersfeed={{feed.name}}">{{feed.name}}</a></h3>
+        <h3>-{{feed.date}}</h3>
+        <h1>{{feed.data}}</h1>
+        </br>
+    </ul>
+
+    {%endfor%}
+{%endblock%}

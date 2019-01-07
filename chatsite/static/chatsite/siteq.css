@@ -1,0 +1,55 @@
+
+body {
+    background-image:url("https://cdn.dribbble.com/users/141574/screenshots/2133121/20150710_chat_icon.gif");
+  background-color: black;
+    width:400px;
+    height:450px;
+}
+h1
+{
+  color: brown;
+  text-align: center;
+    font: block;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20%;
+}
+.division{
+    margin:5% 10% 15% 10%;
+    padding-top:;
+    backgroound-size:auto;
+    overflow: top;
+    background-color: cadetblue;
+    
+}
+.navbar {
+    margin:5% 5% 1% 10%;
+    float:left;
+    padding: 2% 1% 2% 3%;
+    width:70%;
+    backgroud-color:#332211;
+    text-align: center;
+    
+}
+.buttonclass{
+    margin:5% 0% 5% 25%;
+    width:50%;
+    padding:3% 4% 3% 4%;
+    border:none;
+    background-color: darkslateblue;
+    text-align:center;
+    color: aliceblue;
+    border-radius: 5%;
+    float:left;
+    
+}
+.buttonclass:hover{
+    background-color: darkslategray;
+}
+.radio{
+   width:20%;
+    margin:5% 2% 5% 5%;
+    text-align:left;
+}
